@@ -27,7 +27,9 @@ struct CarActionView: View {
                 Spacer()
                 CarActionItemView()
             }
-        }.padding(10)
+        }
+        .shadow(color: .gray, radius: 1.0)
+        .padding(10)
     }
 }
 
