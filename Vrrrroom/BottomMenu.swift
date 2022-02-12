@@ -9,7 +9,15 @@ import SwiftUI
 
 struct BottomMenu: View {
     var body: some View {
-        TabView {}
+        TabView {
+            BottomMenuItem(menuIconName: "home", menuItemName: "Home")
+//            Spacer()
+            BottomMenuItem(menuIconName: "vehicle", menuItemName: "Vehicle")
+//            Spacer()
+            BottomMenuItem(menuIconName: "location", menuItemName: "Location")
+//            Spacer()
+            BottomMenuItem(menuIconName: "settings", menuItemName: "Settings")
+        }
     }
 }
 

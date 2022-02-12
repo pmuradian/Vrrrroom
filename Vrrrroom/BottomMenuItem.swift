@@ -8,13 +8,23 @@
 import SwiftUI
 
 struct BottomMenuItem: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    
+    private let menuIconName: String
+    private let menuItemName: String
+    
+    init(menuIconName: String, menuItemName: String) {
+        self.menuItemName = menuItemName
+        self.menuIconName = menuIconName
     }
-}
-
-struct BottomMenuItem_Previews: PreviewProvider {
-    static var previews: some View {
-        BottomMenuItem()
+    
+    var body: some View {
+        VStack {
+            Image(menuIconName)
+                .renderingMode(.template)
+                .resizable()
+            Text(menuItemName)
+                .font(AppConstants.smallSystemFont)
+                .foregroundColor(AppConstants.appMainBrown)
+        }
     }
 }
