@@ -20,6 +20,8 @@
 		F9B52D6B27B7C96F0057E12A /* CSVTitleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B52D6A27B7C96F0057E12A /* CSVTitleViewModel.swift */; };
 		F9B52D6D27B7D0720057E12A /* CarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B52D6C27B7D0720057E12A /* CarView.swift */; };
 		F9B52D6F27B7DEF30057E12A /* CarCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B52D6E27B7DEF30057E12A /* CarCollectionView.swift */; };
+		F9B52D7127B804320057E12A /* CarActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B52D7027B804320057E12A /* CarActionView.swift */; };
+		F9B52D7327B804640057E12A /* CarActionItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B52D7227B804640057E12A /* CarActionItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		F9B52D6A27B7C96F0057E12A /* CSVTitleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVTitleViewModel.swift; sourceTree = "<group>"; };
 		F9B52D6C27B7D0720057E12A /* CarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarView.swift; sourceTree = "<group>"; };
 		F9B52D6E27B7DEF30057E12A /* CarCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCollectionView.swift; sourceTree = "<group>"; };
+		F9B52D7027B804320057E12A /* CarActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarActionView.swift; sourceTree = "<group>"; };
+		F9B52D7227B804640057E12A /* CarActionItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarActionItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,8 @@
 				F928677027B6A420001DCFD1 /* ContentView.swift */,
 				F9B52D6827B7C52B0057E12A /* ColorHexExtention.swift */,
 				F9B52D6227B7BEF90057E12A /* CarStackView.swift */,
+				F9B52D7027B804320057E12A /* CarActionView.swift */,
+				F9B52D7227B804640057E12A /* CarActionItemView.swift */,
 				F9B52D6E27B7DEF30057E12A /* CarCollectionView.swift */,
 				F9B52D6C27B7D0720057E12A /* CarView.swift */,
 				F9B52D6627B7C2C20057E12A /* CarStackViewTitleView.swift */,
@@ -281,8 +287,10 @@
 				F9B52D6927B7C52B0057E12A /* ColorHexExtention.swift in Sources */,
 				F928676F27B6A420001DCFD1 /* VrrrroomApp.swift in Sources */,
 				F9B52D6327B7BEF90057E12A /* CarStackView.swift in Sources */,
+				F9B52D7327B804640057E12A /* CarActionItemView.swift in Sources */,
 				F9B52D6727B7C2C20057E12A /* CarStackViewTitleView.swift in Sources */,
 				F9B52D6F27B7DEF30057E12A /* CarCollectionView.swift in Sources */,
+				F9B52D7127B804320057E12A /* CarActionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
