@@ -9,12 +9,16 @@ import SwiftUI
 
 struct CarStackViewTitleView: View {
     var body: some View {
+        
         HStack(alignment: .center) {
-            Text("Car name")
-            Divider().frame(width: 2.0, height: 20.0).background(Color(hex: "A66A53"))
+            Text("My QX55").font(AppConstants.boldSystemFont)
+            Divider().frame(width: 2.0, height: 20.0).background(AppConstants.appMainBrown)
             Image("notif_gas")
-            Text("120mi")
+            Text("120mi").font(AppConstants.boldSystemFont)
         }
+        .frame(maxWidth: .infinity)
+        .padding(.bottom, 10)
+        .background(Color.white)
     }
 }
 

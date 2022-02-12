@@ -9,13 +9,25 @@ import SwiftUI
 
 struct CarActionView: View {
     var body: some View {
-        List {
+        VStack {
             HStack {
                 CarActionItemView()
                 Spacer()
                 CarActionItemView()
             }
-        }
+            Spacer()
+            HStack {
+                CarActionItemView()
+                Spacer()
+                CarActionItemView()
+            }
+            Spacer()
+            HStack {
+                CarActionItemView()
+                Spacer()
+                CarActionItemView()
+            }
+        }.padding(10)
     }
 }
 

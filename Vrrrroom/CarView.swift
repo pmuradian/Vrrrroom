@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct CarView: View {
-    private var imageName: String;
+    private var imageName: String
+    
     init(imageName: String) {
         self.imageName = imageName
     }
+    
     var body: some View {
         Image(imageName).resizable().scaledToFit().padding()
     }

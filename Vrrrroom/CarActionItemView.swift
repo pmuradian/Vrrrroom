@@ -8,56 +8,41 @@
 import SwiftUI
 
 struct CarActionItemView: View {
-    private struct Constants {
-        static let boldSystemFont = Font.system(size: 18,
-                                           weight: .bold,
-                                           design: .default)
-        static let graySystemFont = Font.system(size: 14,
-                                           weight: .bold,
-                                           design: .default)
-    }
     
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
                 Text("Doors")
-                    .font(Constants.boldSystemFont)
+                    .font(AppConstants.boldSystemFont)
                 Divider()
                     .frame(width: 2.0, height: 20.0)
-                    .background(AppConstants.appMainBrown)
+                    .background(.gray)
                 Text("Locked")
-                    .font(Constants.graySystemFont)
+                    .font(AppConstants.graySystemFont)
                     .foregroundColor(.gray)
-            }
+            }.padding(.bottom, -5)
             HStack {
-                Button {
-                    
-                } label: {
+                Button { } label: {
                     Image("act_lock")
                         .resizable()
                         .scaledToFit()
                         .padding(5)
                         .background(Color.black)
                         .clipShape(Circle())
-                }
-                .padding(5)
+                }.padding(10)
 
-                Button {
-                    
-                } label: {
+                Button { } label: {
                     Image("act_unlock")
                         .resizable()
                         .scaledToFit()
                         .padding(5)
                         .background(Color.black)
                         .clipShape(Circle())
-                }
-                
-                .padding(5)
+                }.padding(10)
             }
-            .padding(.leading, 10)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color.white)
+            .cornerRadius(5)
         }
     }
 }
