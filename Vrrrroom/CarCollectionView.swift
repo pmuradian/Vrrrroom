@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CarCollectionView: View {
+    let images = ["bat1", "bat2", "bat3"]
     var body: some View {
         VStack {
             HStack {
@@ -17,7 +18,7 @@ struct CarCollectionView: View {
             }
             ScrollView(.horizontal) {
                   LazyHStack {
-                      PageView()
+                      PageView(withImages: images)
                   }
             }
             HStack {
@@ -30,15 +31,19 @@ struct CarCollectionView: View {
             }
         }
     }
-    
-    
 }
+
 struct PageView: View {
+    private var imageNames: [String]
+    init(withImages: [String]) {
+        self.imageNames = withImages
+    }
+    
     var body: some View {
         TabView {
-            ForEach(0..<4) { i in
+            ForEach(values: imageNames) { i in
                 ZStack {
-                    CarView()
+                    CarView(imageName: i)
                 }
             }
             .padding(.all, 10)
@@ -51,5 +56,11 @@ struct PageView: View {
 struct CarCollectionView_Previews: PreviewProvider {
     static var previews: some View {
         CarCollectionView()
+    }
+}
+
+extension ForEach where Data.Element: Hashable, ID == Data.Element, Content: View {
+    init(values: Data, content: @escaping (Data.Element) -> Content) {
+        self.init(values, id: \.self, content: content)
     }
 }
