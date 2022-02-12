@@ -11,7 +11,7 @@ struct CarStackViewTitleView: View {
     var body: some View {
         HStack(alignment: .center) {
             Text("Car name")
-            Divider().frame(width: 2.0).background(Color(hex: "A66A53"))
+            Divider().frame(width: 2.0, height: 20.0).background(Color(hex: "A66A53"))
             Image("notif_gas")
             Text("120mi")
         }

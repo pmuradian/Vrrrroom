@@ -8,13 +8,17 @@
 import SwiftUI
 
 struct CarView: View {
+    private var imageName: String;
+    init(imageName: String) {
+        self.imageName = imageName
+    }
     var body: some View {
-        Image("bat").resizable().scaledToFit().padding()
+        Image(imageName).resizable().scaledToFit().padding()
     }
 }
 
-struct CarInfoView_Previews: PreviewProvider {
-    static var previews: some View {
-        CarView()
-    }
-}
+//struct CarInfoView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CarView()
+//    }
+//}

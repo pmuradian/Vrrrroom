@@ -14,7 +14,7 @@ struct CarCollectionView: View {
             HStack {
                 
                 Image("btn_refresh")
-                Text("last updated")
+                Text("Updated 1 minute ago")
             }
             ScrollView(.horizontal) {
                   LazyHStack {
