@@ -8,25 +8,56 @@
 import SwiftUI
 
 struct CarActionItemView: View {
+    private struct Constants {
+        static let boldSystemFont = Font.system(size: 18,
+                                           weight: .bold,
+                                           design: .default)
+        static let graySystemFont = Font.system(size: 14,
+                                           weight: .bold,
+                                           design: .default)
+    }
+    
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             HStack {
                 Text("Doors")
-                Divider().frame(width: 2.0, height: 20.0).background(Color(hex: "A66A53"))
+                    .font(Constants.boldSystemFont)
+                Divider()
+                    .frame(width: 2.0, height: 20.0)
+                    .background(AppConstants.appMainBrown)
                 Text("Locked")
+                    .font(Constants.graySystemFont)
+                    .foregroundColor(.gray)
             }
             HStack {
                 Button {
                     
                 } label: {
-                    Image("act_lock").background(Color.black)
+                    Image("act_lock")
+                        .resizable()
+                        .scaledToFit()
+                        .padding(5)
+                        .background(Color.black)
+                        .clipShape(Circle())
                 }
+                .padding(5)
+
                 Button {
                     
                 } label: {
-                    Image("act_unlock").background(Color.black)
+                    Image("act_unlock")
+                        .resizable()
+                        .scaledToFit()
+                        .padding(5)
+                        .background(Color.black)
+                        .clipShape(Circle())
                 }
+                
+                .padding(5)
             }
+            .padding(.leading, 10)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color.white)
         }
     }
 }
