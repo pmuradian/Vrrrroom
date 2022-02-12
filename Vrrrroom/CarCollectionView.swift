@@ -49,7 +49,7 @@ struct PageView: View {
             .padding(.all, 10)
         }
         .frame(width: UIScreen.main.bounds.width, height: 200)
-        .tabViewStyle(PageTabViewStyle())
+        .tabViewStyle(.page(indexDisplayMode: .never))
     }
 }
 
