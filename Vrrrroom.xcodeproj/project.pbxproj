@@ -23,6 +23,8 @@
 		F9B52D7127B804320057E12A /* CarActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B52D7027B804320057E12A /* CarActionView.swift */; };
 		F9B52D7327B804640057E12A /* CarActionItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B52D7227B804640057E12A /* CarActionItemView.swift */; };
 		F9B52D7527B8493F0057E12A /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B52D7427B8493F0057E12A /* AppConstants.swift */; };
+		F9B52D7727B8534C0057E12A /* BottomMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B52D7627B8534C0057E12A /* BottomMenu.swift */; };
+		F9B52D7927B853D30057E12A /* BottomMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B52D7827B853D30057E12A /* BottomMenuItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		F9B52D7027B804320057E12A /* CarActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarActionView.swift; sourceTree = "<group>"; };
 		F9B52D7227B804640057E12A /* CarActionItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarActionItemView.swift; sourceTree = "<group>"; };
 		F9B52D7427B8493F0057E12A /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		F9B52D7627B8534C0057E12A /* BottomMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomMenu.swift; sourceTree = "<group>"; };
+		F9B52D7827B853D30057E12A /* BottomMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomMenuItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,8 @@
 				F9B52D6E27B7DEF30057E12A /* CarCollectionView.swift */,
 				F9B52D6C27B7D0720057E12A /* CarView.swift */,
 				F9B52D6627B7C2C20057E12A /* CarStackViewTitleView.swift */,
+				F9B52D7627B8534C0057E12A /* BottomMenu.swift */,
+				F9B52D7827B853D30057E12A /* BottomMenuItem.swift */,
 				F9B52D6A27B7C96F0057E12A /* CSVTitleViewModel.swift */,
 				F928677227B6A421001DCFD1 /* Assets.xcassets */,
 				F928677427B6A421001DCFD1 /* Preview Content */,
@@ -292,8 +298,10 @@
 				F928676F27B6A420001DCFD1 /* VrrrroomApp.swift in Sources */,
 				F9B52D6327B7BEF90057E12A /* CarStackView.swift in Sources */,
 				F9B52D7327B804640057E12A /* CarActionItemView.swift in Sources */,
+				F9B52D7927B853D30057E12A /* BottomMenuItem.swift in Sources */,
 				F9B52D6727B7C2C20057E12A /* CarStackViewTitleView.swift in Sources */,
 				F9B52D6F27B7DEF30057E12A /* CarCollectionView.swift in Sources */,
+				F9B52D7727B8534C0057E12A /* BottomMenu.swift in Sources */,
 				F9B52D7127B804320057E12A /* CarActionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
