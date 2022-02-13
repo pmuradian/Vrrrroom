@@ -8,22 +8,28 @@
 import SwiftUI
 
 struct CarCollectionView: View {
-    let images = ["bat1", "bat2", "bat3"]
+    @ObservedObject var viewModel: CarCollectionViewModel
+    
+    init(viewModel: CarCollectionViewModel) {
+        self.viewModel = viewModel
+    }
+    
     var body: some View {
         VStack {
             HStack {
-                
                 Image("btn_refresh")
                 Text("Updated 1 minute ago").fontWeight(.bold)
             }
             ScrollView(.horizontal) {
                   LazyHStack {
-                      PageView(withImages: images)
+                      PageView(viewModel: self.viewModel)
                   }
             }
             HStack {
-                ForEach(1..<4, id: \.self) {_ in
-                    Divider().frame(width: 30.0, height: 4.0).background(AppConstants.appMainBrown)
+                ForEach(0..<3, id: \.self) { index in
+                    Divider().frame(width: 30.0, height: 4.0).background {
+                        index == viewModel.selectedCarIndex ? AppConstants.appMainBrown: Color.gray
+                    }
                 }
                 Button() { } label: {
                     Text("+").font(.largeTitle).bold()
@@ -34,36 +40,32 @@ struct CarCollectionView: View {
 }
 
 struct PageView: View {
-    private var imageNames: [String]
+    @ObservedObject var viewModel: CarCollectionViewModel
     @State var pageIndex = 0
     
-    init(withImages: [String]) {
-        self.imageNames = withImages
+    init(viewModel: CarCollectionViewModel) {
+        self.viewModel = viewModel
     }
     
     var body: some View {
         TabView(selection: $pageIndex) {
-            ForEach(values: imageNames.indices) { i in
+            ForEach(viewModel.cars.indices) { i in
                 VStack {
-                    Text("current page = \(pageIndex) ")
-                    CarView(imageName: imageNames[i]).tag(i)
+                    CarView(imageName: viewModel.getSelectedCarImageName()).tag(i)
                 }
             }
             .padding(.all, 10)
         }
+        .onChange(of: pageIndex, perform: { value in
+            viewModel.setSelectedCarIndex(index: pageIndex)
+        })
         .frame(width: UIScreen.main.bounds.width, height: 200)
         .tabViewStyle(.page(indexDisplayMode: .never))
     }
 }
 
-struct CarCollectionView_Previews: PreviewProvider {
-    static var previews: some View {
-        CarCollectionView()
-    }
-}
-
-extension ForEach where Data.Element: Hashable, ID == Data.Element, Content: View {
-    init(values: Data, content: @escaping (Data.Element) -> Content) {
-        self.init(values, id: \.self, content: content)
-    }
-}
+//struct CarCollectionView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CarCollectionView()
+//    }
+//}
