@@ -23,7 +23,6 @@
 		F9B52D6327B7BEF90057E12A /* CarStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B52D6227B7BEF90057E12A /* CarStackView.swift */; };
 		F9B52D6727B7C2C20057E12A /* CarStackViewTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B52D6627B7C2C20057E12A /* CarStackViewTitleView.swift */; };
 		F9B52D6927B7C52B0057E12A /* ColorHexExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B52D6827B7C52B0057E12A /* ColorHexExtention.swift */; };
-		F9B52D6B27B7C96F0057E12A /* CSVTitleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B52D6A27B7C96F0057E12A /* CSVTitleViewModel.swift */; };
 		F9B52D6D27B7D0720057E12A /* CarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B52D6C27B7D0720057E12A /* CarView.swift */; };
 		F9B52D6F27B7DEF30057E12A /* CarCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B52D6E27B7DEF30057E12A /* CarCollectionView.swift */; };
 		F9B52D7127B804320057E12A /* CarActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B52D7027B804320057E12A /* CarActionView.swift */; };
@@ -70,7 +69,6 @@
 		F9B52D6227B7BEF90057E12A /* CarStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarStackView.swift; sourceTree = "<group>"; };
 		F9B52D6627B7C2C20057E12A /* CarStackViewTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarStackViewTitleView.swift; sourceTree = "<group>"; };
 		F9B52D6827B7C52B0057E12A /* ColorHexExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHexExtention.swift; sourceTree = "<group>"; };
-		F9B52D6A27B7C96F0057E12A /* CSVTitleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVTitleViewModel.swift; sourceTree = "<group>"; };
 		F9B52D6C27B7D0720057E12A /* CarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarView.swift; sourceTree = "<group>"; };
 		F9B52D6E27B7DEF30057E12A /* CarCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCollectionView.swift; sourceTree = "<group>"; };
 		F9B52D7027B804320057E12A /* CarActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarActionView.swift; sourceTree = "<group>"; };
@@ -128,25 +126,11 @@
 		F928676D27B6A420001DCFD1 /* Vrrrroom */ = {
 			isa = PBXGroup;
 			children = (
+				F9A0097C27B9514800CC7276 /* Utils */,
+				F9A0097B27B950E000CC7276 /* Car selection */,
+				F9A0097A27B9509C00CC7276 /* Tab bar */,
+				F9A0097927B9503800CC7276 /* Car Action */,
 				F928676E27B6A420001DCFD1 /* VrrrroomApp.swift */,
-				F928677027B6A420001DCFD1 /* ContentView.swift */,
-				F9B52D6827B7C52B0057E12A /* ColorHexExtention.swift */,
-				F9B52D6227B7BEF90057E12A /* CarStackView.swift */,
-				F9B52D7027B804320057E12A /* CarActionView.swift */,
-				F9B52D7227B804640057E12A /* CarActionItemView.swift */,
-				F9A0097727B94D3200CC7276 /* ItemState.swift */,
-				F9A0097527B94D1C00CC7276 /* CarActionItemModel.swift */,
-				F9A0097327B94CFB00CC7276 /* CarActionViewModel.swift */,
-				F9A0097127B94CCE00CC7276 /* CarEngineActionViewModel.swift */,
-				F9A0096F27B94CAA00CC7276 /* CarLockActionViewModel.swift */,
-				F9A0096D27B94C8500CC7276 /* ButtonItem.swift */,
-				F9B52D7427B8493F0057E12A /* AppConstants.swift */,
-				F9B52D6E27B7DEF30057E12A /* CarCollectionView.swift */,
-				F9B52D6C27B7D0720057E12A /* CarView.swift */,
-				F9B52D6627B7C2C20057E12A /* CarStackViewTitleView.swift */,
-				F9B52D7627B8534C0057E12A /* BottomMenu.swift */,
-				F9B52D7827B853D30057E12A /* BottomMenuItem.swift */,
-				F9B52D6A27B7C96F0057E12A /* CSVTitleViewModel.swift */,
 				F928677227B6A421001DCFD1 /* Assets.xcassets */,
 				F928677427B6A421001DCFD1 /* Preview Content */,
 			);
@@ -176,6 +160,51 @@
 				F928678B27B6A422001DCFD1 /* VrrrroomUITestsLaunchTests.swift */,
 			);
 			path = VrrrroomUITests;
+			sourceTree = "<group>";
+		};
+		F9A0097927B9503800CC7276 /* Car Action */ = {
+			isa = PBXGroup;
+			children = (
+				F9B52D7027B804320057E12A /* CarActionView.swift */,
+				F9B52D7227B804640057E12A /* CarActionItemView.swift */,
+				F9A0097327B94CFB00CC7276 /* CarActionViewModel.swift */,
+				F9A0097527B94D1C00CC7276 /* CarActionItemModel.swift */,
+				F9A0097127B94CCE00CC7276 /* CarEngineActionViewModel.swift */,
+				F9A0096F27B94CAA00CC7276 /* CarLockActionViewModel.swift */,
+				F9A0096D27B94C8500CC7276 /* ButtonItem.swift */,
+				F9A0097727B94D3200CC7276 /* ItemState.swift */,
+			);
+			path = "Car Action";
+			sourceTree = "<group>";
+		};
+		F9A0097A27B9509C00CC7276 /* Tab bar */ = {
+			isa = PBXGroup;
+			children = (
+				F928677027B6A420001DCFD1 /* ContentView.swift */,
+				F9B52D7627B8534C0057E12A /* BottomMenu.swift */,
+				F9B52D7827B853D30057E12A /* BottomMenuItem.swift */,
+			);
+			path = "Tab bar";
+			sourceTree = "<group>";
+		};
+		F9A0097B27B950E000CC7276 /* Car selection */ = {
+			isa = PBXGroup;
+			children = (
+				F9B52D6627B7C2C20057E12A /* CarStackViewTitleView.swift */,
+				F9B52D6227B7BEF90057E12A /* CarStackView.swift */,
+				F9B52D6E27B7DEF30057E12A /* CarCollectionView.swift */,
+				F9B52D6C27B7D0720057E12A /* CarView.swift */,
+			);
+			path = "Car selection";
+			sourceTree = "<group>";
+		};
+		F9A0097C27B9514800CC7276 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F9B52D7427B8493F0057E12A /* AppConstants.swift */,
+				F9B52D6827B7C52B0057E12A /* ColorHexExtention.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,7 +339,6 @@
 			files = (
 				F9B52D6D27B7D0720057E12A /* CarView.swift in Sources */,
 				F928677127B6A420001DCFD1 /* ContentView.swift in Sources */,
-				F9B52D6B27B7C96F0057E12A /* CSVTitleViewModel.swift in Sources */,
 				F9B52D7527B8493F0057E12A /* AppConstants.swift in Sources */,
 				F9B52D6927B7C52B0057E12A /* ColorHexExtention.swift in Sources */,
 				F928676F27B6A420001DCFD1 /* VrrrroomApp.swift in Sources */,
