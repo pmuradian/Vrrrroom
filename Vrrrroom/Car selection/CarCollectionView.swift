@@ -49,7 +49,7 @@ struct PageView: View {
     
     var body: some View {
         TabView(selection: $pageIndex) {
-            ForEach(viewModel.cars.indices) { i in
+            ForEach(viewModel.getCarIndices()) { i in
                 VStack {
                     CarView(imageName: viewModel.getSelectedCarImageName()).tag(i)
                 }

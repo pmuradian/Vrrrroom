@@ -16,7 +16,7 @@ struct CarDataModel {
 }
 
 class CarCollectionViewModel: ObservableObject {
-    let cars: [CarModel]
+    private let cars: [CarModel]
     @Published var selectedCarIndex: Int
     
     init(cars: [CarDataModel], selectedIndex: Int) {
@@ -44,5 +44,9 @@ class CarCollectionViewModel: ObservableObject {
     
     func getImageStringForCarAtIndex(index: Int) -> String {
         cars[index].imageName
+    }
+    
+    func getCarIndices() -> Range<Int> {
+        cars.indices
     }
 }
