@@ -23,10 +23,10 @@ struct CarCollectionView: View {
             }
             HStack {
                 ForEach(1..<4, id: \.self) {_ in
-                    Divider().frame(width: 30.0, height: 4.0).background(Color(hex: "A66A53"))
+                    Divider().frame(width: 30.0, height: 4.0).background(AppConstants.appMainBrown)
                 }
-                Button("+") {
-                    
+                Button() { } label: {
+                    Text("+").font(.largeTitle).bold()
                 }
             }
         }

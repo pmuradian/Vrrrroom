@@ -19,9 +19,11 @@ struct BottomMenuItem: View {
     
     var body: some View {
         VStack {
+//            Label(menuItemName, image: menuIconName)
             Image(menuIconName)
                 .renderingMode(.template)
                 .resizable()
+
             Text(menuItemName)
                 .font(AppConstants.smallSystemFont)
                 .foregroundColor(AppConstants.appMainBrown)

@@ -11,22 +11,29 @@ struct CarActionView: View {
     var body: some View {
         VStack {
             HStack {
-                CarActionItemView()
+                let doorActionModel = CarActionItemModel(titleString: "Doors",
+                                                     state: .active,
+                                                     buttonItems: [ButtonItem(imageName: "act_unlock",
+                                                                        labelString: nil,
+                                                                        type: .unlock),
+                                                             ButtonItem(imageName: "act_lock",
+                                                                        labelString: nil,
+                                                                        type: .lock)])
+                let doorsViewModel = CarLockActionViewModel(model: doorActionModel)
+                CarActionItemView(viewModel: doorsViewModel)
                 Spacer()
-                CarActionItemView()
+                let engineActionModel = CarActionItemModel(titleString: "Engine",
+                                                           state: .inactive,
+                                                           buttonItems: [ButtonItem(imageName: nil,
+                                                                              labelString: "START",
+                                                                              type: .start),
+                                                                   ButtonItem(imageName: nil,
+                                                                              labelString: "STOP",
+                                                                              type: .stop)])
+                let engineViewModel = CarEngineActionViewModel(model: engineActionModel)
+                CarActionItemView(viewModel: engineViewModel)
             }
             Spacer()
-            HStack {
-                CarActionItemView()
-                Spacer()
-                CarActionItemView()
-            }
-            Spacer()
-            HStack {
-                CarActionItemView()
-                Spacer()
-                CarActionItemView()
-            }
         }
         .shadow(color: .gray, radius: 1.0)
         .padding(10)

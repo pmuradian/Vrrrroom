@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct CarActionItemModel {
+    var titleString: String
+    var state: ItemState
+    var buttonItems: [ButtonItem]
+}
