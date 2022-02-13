@@ -15,10 +15,12 @@ struct CarActionView: View {
                                                      state: .active,
                                                      buttonItems: [ButtonItem(imageName: "act_unlock",
                                                                         labelString: nil,
-                                                                        type: .unlock),
+                                                                        type: .unlock,
+                                                                        state: .inactive),
                                                              ButtonItem(imageName: "act_lock",
                                                                         labelString: nil,
-                                                                        type: .lock)])
+                                                                        type: .lock,
+                                                                        state: .inactive)])
                 let doorsViewModel = CarLockActionViewModel(model: doorActionModel)
                 CarActionItemView(viewModel: doorsViewModel)
                 Spacer()
@@ -26,10 +28,12 @@ struct CarActionView: View {
                                                            state: .inactive,
                                                            buttonItems: [ButtonItem(imageName: nil,
                                                                               labelString: "START",
-                                                                              type: .start),
+                                                                              type: .start,
+                                                                              state: .inactive),
                                                                    ButtonItem(imageName: nil,
                                                                               labelString: "STOP",
-                                                                              type: .stop)])
+                                                                              type: .stop,
+                                                                              state: .inactive)])
                 let engineViewModel = CarEngineActionViewModel(model: engineActionModel)
                 CarActionItemView(viewModel: engineViewModel)
             }

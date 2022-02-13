@@ -27,6 +27,7 @@ struct CarActionItemView: View {
             if let text = buttonItem.labelString {
                 Text(text)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .foregroundColor(Color.white)
             }
         }
         .alert(item: $selectedItem) { item in
@@ -38,6 +39,9 @@ struct CarActionItemView: View {
             })
         }
     }
+    
+    @State private var isLoading = false
+    @State private var animationAmount = 1.0
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -53,10 +57,30 @@ struct CarActionItemView: View {
             }.padding(.bottom, -5)
             HStack {
                 ForEach(viewModel.buttonItems, id: \.self) { item in
-                    createButtonFrom(buttonItem: ButtonItem(imageName: item.imageName, labelString: item.labelString, type: item.type))
+                    if item.state == .loading {
+                        Circle()
+                            .trim(from: 0, to: 0.7)
+                            .stroke(AppConstants.appMainBrown, lineWidth: 5)
+                                        .rotationEffect(Angle(degrees: isLoading ? 360 : 0))
+                                        .animation(Animation.default.repeatForever(autoreverses: false), value: animationAmount)
+                                        .onAppear() {
+                                            self.isLoading = true
+                                            animationAmount += 1
+                                        }
+                    } else {
+                    createButtonFrom(buttonItem: item)
                         .padding(5)
-                        .background(Color.black)
+                        .background {
+                                switch item.state {
+                                case .active: AppConstants.appMainBrown
+                                case .disabled: Color.gray
+                                case .inactive: Color.black
+                                default: Color.white
+                            }
+                        }
                         .clipShape(Circle())
+                        
+                    }
                 }.padding(10)
             }
             .frame(height: 90)

@@ -27,37 +27,37 @@ class VrrrroomTests: XCTestCase {
     }
     
     func test_carLockActionViewModel_title() {
-        let model = CarActionItemModel(titleString: "infinityu", state: .active, icons: [])
+        let model = CarActionItemModel(titleString: "infinityu", state: .active, buttonItems: [])
         let viewModel = CarActionViewModel(model: model)
         XCTAssertEqual(viewModel.title, model.titleString)
     }
     
     func test_carLockActionViewModel_locked_state() {
-        let model = CarActionItemModel(titleString: "", state: .active, icons: [])
+        let model = CarActionItemModel(titleString: "", state: .active, buttonItems: [])
         let viewModel = CarActionViewModel(model: model)
         XCTAssertEqual(viewModel.stateString, "Locked")
     }
     
     func test_carLockActionViewModel_unlocked_state() {
-        let model = CarActionItemModel(titleString: "", state: .inactive, icons: [])
+        let model = CarActionItemModel(titleString: "", state: .inactive, buttonItems: [])
         let viewModel = CarActionViewModel(model: model)
         XCTAssertEqual(viewModel.stateString, "Unlocked")
     }
     
     func test_carLockActionViewModel_busy_state() {
-        let model = CarActionItemModel(titleString: "", state: .busy, icons: [])
+        let model = CarActionItemModel(titleString: "", state: .busy, buttonItems: [])
         let viewModel = CarActionViewModel(model: model)
         XCTAssertEqual(viewModel.stateString, "...")
     }
     
     func test_carLockActionViewModel_unknown_state() {
-        let model = CarActionItemModel(titleString: "", state: .unknown, icons: [])
+        let model = CarActionItemModel(titleString: "", state: .unknown, buttonItems: [])
         let viewModel = CarActionViewModel(model: model)
         XCTAssertEqual(viewModel.stateString, "")
     }
     
-    func test_carLockActionViewModelStateChange() {
-        let model = CarActionItemModel(titleString: "", state: .unknown, icons: [])
+    func test_carLockActionViewModel_state_change() {
+        let model = CarActionItemModel(titleString: "", state: .unknown, buttonItems: [])
         let viewModel = CarLockActionViewModel(model: model)
         viewModel.changeState(newState: .active)
         XCTAssertEqual(ItemState.active, viewModel.model.state)
@@ -68,6 +68,36 @@ class VrrrroomTests: XCTestCase {
         viewModel.changeState(newState: .unknown)
         XCTAssertEqual(ItemState.unknown, viewModel.model.state)
     }
+    
+    // ButtonItemModel should go from inactive to loading on tap
+    func test_ButtonItemModel_state_should_change_to_loading() {
+        var item = ButtonItem(imageName: "", labelString: "", type: .stop, state: .inactive, isSelected: false)
+        item.startLoading()
+        XCTAssertEqual(item.state, ButtonItemState.loading)
+    }
+    
+    func test_ButtonItemModel_state_should_change_to_active() {
+        var item = ButtonItem(imageName: "", labelString: "", type: .stop, state: .loading, isSelected: false)
+        item.becomeActive()
+        XCTAssertEqual(item.state, ButtonItemState.active)
+    }
+    
+    func test_ButtonItemModel_state_should_change_to_inactive() {
+        var item = ButtonItem(imageName: "", labelString: "", type: .stop, state: .active, isSelected: false)
+        item.becomeInactive()
+        XCTAssertEqual(item.state, ButtonItemState.active)
+    }
+    
+    func test_ButtonItemModel_state_should_change_to_disabled() {
+        var item = ButtonItem(imageName: "", labelString: "", type: .stop, state: .inactive, isSelected: false)
+        item.becomeDisabled()
+        XCTAssertEqual(item.state, ButtonItemState.disabled)
+    }
+    // ButtonItemModel should go from loading to active if something succeded
+    // ButtonItemModel should go from loading to inactive if something failed
+    // ButtonItemModel should stay in loading for 5 seconds
+    // ButtonItemModel should go to disabled from disabled if other button is loading
+    // ButtonItemModel should become inactive if the other button is active/inactive
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
