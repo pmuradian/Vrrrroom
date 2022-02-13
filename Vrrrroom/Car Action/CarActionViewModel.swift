@@ -31,31 +31,30 @@ class CarActionViewModel: ObservableObject {
         hasSelectedButtonItem = true
         isAnimating = true
         for (index, item) in buttonItems.enumerated() {
-            buttonItems[index].state = item == buttonItem ? .loading : .disabled
+            if item.type == buttonItem.type {
+                buttonItems[index].startLoading()
+            } else {
+                buttonItems[index].becomeDisabled()
+            }
         }
         
         timer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false) { _ in
             self.isAnimating = false
-            self.title = "hakob"
             for (index, item) in self.buttonItems.enumerated() {
                 if item.type == buttonItem.type {
                     self.buttonItems[index].becomeActive() // or become inactive in case of a falure
                 } else {
                     self.buttonItems[index].becomeInactive()
                 }
+                switch self.buttonItems[index].type {
+                case .lock, .start:
+                    self.changeState(newState: .active)
+                case .unlock, .stop:
+                    self.changeState(newState: .inactive)
+                }
             }
         }
-        
-        switch buttonItem.type {
-        case .lock, .start:
-            if model.state != .active {
-                changeState(newState: .active)
-            }
-        case .unlock, .stop:
-            if model.state != .inactive {
-                changeState(newState: .inactive)
-            }
-        }
+        changeState(newState: .busy)
     }
     
     func changeState(newState: ItemState) {

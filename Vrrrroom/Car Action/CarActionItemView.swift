@@ -17,7 +17,9 @@ struct CarActionItemView: View {
     
     private func createButtonFrom(buttonItem: ButtonItem) -> some View {
         return Button {
-            selectedItem = buttonItem
+            if buttonItem.state == .inactive {
+                selectedItem = buttonItem
+            }
         } label: {
             if let name = buttonItem.imageName {
                 Image(name)
@@ -67,6 +69,10 @@ struct CarActionItemView: View {
                                             self.isLoading = true
                                             animationAmount += 1
                                         }
+                                        .onDisappear(perform: {
+                                            self.isLoading = false
+                                            animationAmount -= 1
+                                        })
                     } else {
                     createButtonFrom(buttonItem: item)
                         .padding(5)
@@ -79,7 +85,6 @@ struct CarActionItemView: View {
                             }
                         }
                         .clipShape(Circle())
-                        
                     }
                 }.padding(10)
             }

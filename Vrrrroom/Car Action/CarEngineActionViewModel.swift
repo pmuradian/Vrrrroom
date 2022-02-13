@@ -10,16 +10,7 @@ import Foundation
 class CarEngineActionViewModel: CarActionViewModel {
     override init(model: CarActionItemModel) {
         super.init(model: model)
-        switch model.state {
-        case .active:
-            stateString = "Started"
-        case .inactive:
-            stateString = "Stopped"
-        case .busy:
-            stateString = "..."
-        case .unknown:
-            stateString = ""
-        }
+        changeState(newState: model.state)
     }
     
     override func changeState(newState: ItemState) {

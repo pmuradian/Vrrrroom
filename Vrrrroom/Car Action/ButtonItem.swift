@@ -53,7 +53,7 @@ struct ButtonItem: Hashable, Identifiable {
     
     mutating func becomeInactive() {
         switch state {
-        case .loading, .disabled:
+        case .loading, .disabled, .active:
             state = .inactive
         default:
             print("Current state can not be changed to loading")
@@ -62,7 +62,7 @@ struct ButtonItem: Hashable, Identifiable {
     
     mutating func becomeDisabled() {
         switch state {
-        case .inactive:
+        case .inactive, .active:
             state = .disabled
         default:
             print("Current state can not be changed to loading")
