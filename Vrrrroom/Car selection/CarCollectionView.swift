@@ -35,15 +35,18 @@ struct CarCollectionView: View {
 
 struct PageView: View {
     private var imageNames: [String]
+    @State var pageIndex = 0
+    
     init(withImages: [String]) {
         self.imageNames = withImages
     }
     
     var body: some View {
-        TabView {
-            ForEach(values: imageNames) { i in
-                ZStack {
-                    CarView(imageName: i)
+        TabView(selection: $pageIndex) {
+            ForEach(values: imageNames.indices) { i in
+                VStack {
+                    Text("current page = \(pageIndex) ")
+                    CarView(imageName: imageNames[i]).tag(i)
                 }
             }
             .padding(.all, 10)

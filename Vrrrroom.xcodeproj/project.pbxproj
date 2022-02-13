@@ -20,6 +20,7 @@
 		F9A0097427B94CFB00CC7276 /* CarActionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A0097327B94CFB00CC7276 /* CarActionViewModel.swift */; };
 		F9A0097627B94D1C00CC7276 /* CarActionItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A0097527B94D1C00CC7276 /* CarActionItemModel.swift */; };
 		F9A0097827B94D3200CC7276 /* ItemState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A0097727B94D3200CC7276 /* ItemState.swift */; };
+		F9A0097E27B9915100CC7276 /* CarCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A0097D27B9915100CC7276 /* CarCollectionViewModel.swift */; };
 		F9B52D6327B7BEF90057E12A /* CarStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B52D6227B7BEF90057E12A /* CarStackView.swift */; };
 		F9B52D6727B7C2C20057E12A /* CarStackViewTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B52D6627B7C2C20057E12A /* CarStackViewTitleView.swift */; };
 		F9B52D6927B7C52B0057E12A /* ColorHexExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B52D6827B7C52B0057E12A /* ColorHexExtention.swift */; };
@@ -66,6 +67,7 @@
 		F9A0097327B94CFB00CC7276 /* CarActionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarActionViewModel.swift; sourceTree = "<group>"; };
 		F9A0097527B94D1C00CC7276 /* CarActionItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarActionItemModel.swift; sourceTree = "<group>"; };
 		F9A0097727B94D3200CC7276 /* ItemState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemState.swift; sourceTree = "<group>"; };
+		F9A0097D27B9915100CC7276 /* CarCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCollectionViewModel.swift; sourceTree = "<group>"; };
 		F9B52D6227B7BEF90057E12A /* CarStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarStackView.swift; sourceTree = "<group>"; };
 		F9B52D6627B7C2C20057E12A /* CarStackViewTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarStackViewTitleView.swift; sourceTree = "<group>"; };
 		F9B52D6827B7C52B0057E12A /* ColorHexExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHexExtention.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				F9B52D6627B7C2C20057E12A /* CarStackViewTitleView.swift */,
 				F9B52D6227B7BEF90057E12A /* CarStackView.swift */,
 				F9B52D6E27B7DEF30057E12A /* CarCollectionView.swift */,
+				F9A0097D27B9915100CC7276 /* CarCollectionViewModel.swift */,
 				F9B52D6C27B7D0720057E12A /* CarView.swift */,
 			);
 			path = "Car selection";
@@ -341,6 +344,7 @@
 				F928677127B6A420001DCFD1 /* ContentView.swift in Sources */,
 				F9B52D7527B8493F0057E12A /* AppConstants.swift in Sources */,
 				F9B52D6927B7C52B0057E12A /* ColorHexExtention.swift in Sources */,
+				F9A0097E27B9915100CC7276 /* CarCollectionViewModel.swift in Sources */,
 				F928676F27B6A420001DCFD1 /* VrrrroomApp.swift in Sources */,
 				F9A0097027B94CAA00CC7276 /* CarLockActionViewModel.swift in Sources */,
 				F9B52D6327B7BEF90057E12A /* CarStackView.swift in Sources */,
