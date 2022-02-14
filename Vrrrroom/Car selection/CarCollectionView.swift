@@ -32,7 +32,10 @@ struct CarCollectionView: View {
                     }
                 }
                 Button() { } label: {
-                    Text("+").font(.largeTitle).bold()
+                    Text("+").font(.largeTitle)
+                        .bold()
+                        .foregroundColor(Color.gray)
+                        .padding(.bottom, 4)
                 }
             }
         }

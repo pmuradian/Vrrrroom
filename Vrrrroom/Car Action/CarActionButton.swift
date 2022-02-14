@@ -21,7 +21,7 @@ enum ButtonItemState {
     case disabled
 }
 
-struct ButtonItem: Hashable, Identifiable {
+struct CarActionButton: Hashable, Identifiable {
     
     var id: UUID {
         return UUID()
