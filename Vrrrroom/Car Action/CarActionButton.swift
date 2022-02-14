@@ -7,14 +7,14 @@
 
 import Foundation
 
-enum ButtonItemType {
+enum ButtonType {
     case lock
     case unlock
     case start
     case stop
 }
 
-enum ButtonItemState {
+enum ButtonState {
     case loading
     case active
     case inactive
@@ -29,8 +29,8 @@ struct CarActionButton: Hashable, Identifiable {
     
     let imageName: String?
     let labelString: String?
-    let type: ButtonItemType
-    var state: ButtonItemState
+    let type: ButtonType
+    var state: ButtonState
     var isSelected: Bool = false
     
     mutating func startLoading() {

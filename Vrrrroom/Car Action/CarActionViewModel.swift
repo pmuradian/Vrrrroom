@@ -20,21 +20,21 @@ class CarActionViewModel: ObservableObject {
         self.model = model
         title = model.titleString
         stateString = model.state.rawValue
-        buttonInfos = model.buttonItems.map { item in
+        buttonInfos = model.buttonItems.map { (item) -> ButtonInfo in
             switch item.state {
-            case .inactive: return ButtonInfo(buttonState: ButtonState.inactive,
+            case .inactive: return ButtonInfo(buttonState: .inactive,
                                               buttonImage: item.imageName,
                                               buttonText: item.labelString,
                                               buttonItem: item)
-            case .active: return ButtonInfo(buttonState: ButtonState.active,
+            case .active: return ButtonInfo(buttonState: .active,
                                             buttonImage: item.imageName,
                                             buttonText: item.labelString,
                                             buttonItem: item)
-            case .disabled: return ButtonInfo(buttonState: ButtonState.disabled,
+            case .disabled: return ButtonInfo(buttonState: .disabled,
                                               buttonImage: item.imageName,
                                               buttonText: item.labelString,
                                               buttonItem: item)
-            case .loading: return ButtonInfo(buttonState: ButtonState.loading,
+            case .loading: return ButtonInfo(buttonState: .loading,
                                              buttonImage: item.imageName,
                                              buttonText: item.labelString,
                                              buttonItem: item)
@@ -42,8 +42,7 @@ class CarActionViewModel: ObservableObject {
         }
     }
     
-    func actionFor(buttonInfo: ButtonInfo) {
-        print(buttonInfo)
+    func handleButtonTap(buttonInfo: ButtonInfo) {
         if model.state == .busy {
             return
         }

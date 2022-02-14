@@ -13,11 +13,11 @@ struct CarActionView: View {
             HStack {
                 let doorActionModel = CarActionItemModel(titleString: "Doors",
                                                      state: .unknown,
-                                                     buttonItems: [ButtonItem(imageName: "act_unlock",
+                                                     buttonItems: [CarActionButton(imageName: "act_unlock",
                                                                         labelString: nil,
                                                                         type: .unlock,
                                                                         state: .inactive),
-                                                             ButtonItem(imageName: "act_lock",
+                                                             CarActionButton(imageName: "act_lock",
                                                                         labelString: nil,
                                                                         type: .lock,
                                                                         state: .inactive)])
@@ -26,11 +26,11 @@ struct CarActionView: View {
                 Spacer()
                 let engineActionModel = CarActionItemModel(titleString: "Engine",
                                                            state: .unknown,
-                                                           buttonItems: [ButtonItem(imageName: nil,
+                                                           buttonItems: [CarActionButton(imageName: nil,
                                                                               labelString: "START",
                                                                               type: .start,
                                                                               state: .inactive),
-                                                                   ButtonItem(imageName: nil,
+                                                                   CarActionButton(imageName: nil,
                                                                               labelString: "STOP",
                                                                               type: .stop,
                                                                               state: .inactive)])

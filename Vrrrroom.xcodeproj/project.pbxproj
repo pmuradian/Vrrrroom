@@ -14,7 +14,7 @@
 		F928678027B6A422001DCFD1 /* VrrrroomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F928677F27B6A422001DCFD1 /* VrrrroomTests.swift */; };
 		F928678A27B6A422001DCFD1 /* VrrrroomUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F928678927B6A422001DCFD1 /* VrrrroomUITests.swift */; };
 		F928678C27B6A422001DCFD1 /* VrrrroomUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F928678B27B6A422001DCFD1 /* VrrrroomUITestsLaunchTests.swift */; };
-		F9A0096E27B94C8500CC7276 /* ButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A0096D27B94C8500CC7276 /* ButtonItem.swift */; };
+		F9A0096E27B94C8500CC7276 /* CarActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A0096D27B94C8500CC7276 /* CarActionButton.swift */; };
 		F9A0097027B94CAA00CC7276 /* CarLockActionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A0096F27B94CAA00CC7276 /* CarLockActionViewModel.swift */; };
 		F9A0097227B94CCE00CC7276 /* CarEngineActionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A0097127B94CCE00CC7276 /* CarEngineActionViewModel.swift */; };
 		F9A0097427B94CFB00CC7276 /* CarActionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A0097327B94CFB00CC7276 /* CarActionViewModel.swift */; };
@@ -63,7 +63,7 @@
 		F928678527B6A422001DCFD1 /* VrrrroomUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VrrrroomUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F928678927B6A422001DCFD1 /* VrrrroomUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VrrrroomUITests.swift; sourceTree = "<group>"; };
 		F928678B27B6A422001DCFD1 /* VrrrroomUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VrrrroomUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		F9A0096D27B94C8500CC7276 /* ButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonItem.swift; sourceTree = "<group>"; };
+		F9A0096D27B94C8500CC7276 /* CarActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarActionButton.swift; sourceTree = "<group>"; };
 		F9A0096F27B94CAA00CC7276 /* CarLockActionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarLockActionViewModel.swift; sourceTree = "<group>"; };
 		F9A0097127B94CCE00CC7276 /* CarEngineActionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarEngineActionViewModel.swift; sourceTree = "<group>"; };
 		F9A0097327B94CFB00CC7276 /* CarActionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarActionViewModel.swift; sourceTree = "<group>"; };
@@ -178,7 +178,7 @@
 				F9A0097527B94D1C00CC7276 /* CarActionItemModel.swift */,
 				F9A0097127B94CCE00CC7276 /* CarEngineActionViewModel.swift */,
 				F9A0096F27B94CAA00CC7276 /* CarLockActionViewModel.swift */,
-				F9A0096D27B94C8500CC7276 /* ButtonItem.swift */,
+				F9A0096D27B94C8500CC7276 /* CarActionButton.swift */,
 				F9A0097727B94D3200CC7276 /* ItemState.swift */,
 			);
 			path = "Car Action";
@@ -357,7 +357,7 @@
 				F9B52D7327B804640057E12A /* CarActionItemView.swift in Sources */,
 				F9A0097427B94CFB00CC7276 /* CarActionViewModel.swift in Sources */,
 				F9A0098227BA728B00CC7276 /* ButtonInfo.swift in Sources */,
-				F9A0096E27B94C8500CC7276 /* ButtonItem.swift in Sources */,
+				F9A0096E27B94C8500CC7276 /* CarActionButton.swift in Sources */,
 				F9B52D7927B853D30057E12A /* BottomMenuItem.swift in Sources */,
 				F9B52D6727B7C2C20057E12A /* CarStackViewTitleView.swift in Sources */,
 				F9B52D6F27B7DEF30057E12A /* CarCollectionView.swift in Sources */,

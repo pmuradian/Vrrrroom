@@ -18,9 +18,3 @@ struct CarView: View {
         Image(imageName).resizable().scaledToFit().padding()
     }
 }
-
-//struct CarInfoView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CarView()
-//    }
-//}

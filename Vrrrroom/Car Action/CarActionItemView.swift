@@ -37,10 +37,10 @@ struct CarActionItemView: View {
         }
         .alert(item: $selectedButtonInfo) { item in
             Alert(title: Text("Are you sure"),
-                  message: Text("Please confirm that you want to unlock Avto"),
+                  message: Text("Please confirm that you want to unlock auto"),
                   primaryButton: .cancel(),
                   secondaryButton: .default(Text("Yes Unlock")) {
-                    viewModel.actionFor(buttonInfo: item)
+                    viewModel.handleButtonTap(buttonInfo: item)
             })
         }
     }
@@ -64,7 +64,8 @@ struct CarActionItemView: View {
                             .trim(from: 0, to: 0.7)
                             .stroke(AppConstants.appMainBrown, lineWidth: 5)
                                         .rotationEffect(Angle(degrees: isLoading ? 360 : 0))
-                                        .animation(Animation.default.repeatForever(autoreverses: false), value: animationAmount)
+                                        .animation(Animation.default.repeatForever(autoreverses: false),
+                                                   value: animationAmount)
                                         .onAppear() {
                                             self.isLoading = true
                                             animationAmount += 1
@@ -88,8 +89,6 @@ struct CarActionItemView: View {
         .frame(maxWidth: .infinity)
         .cornerRadius(5)
     }
-    
-    
 }
 
 //struct CarActionItemView_Previews: PreviewProvider {

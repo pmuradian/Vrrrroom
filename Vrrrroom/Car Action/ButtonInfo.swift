@@ -7,13 +7,6 @@
 
 import Foundation
 
-enum ButtonState {
-    case active
-    case inactive
-    case disabled
-    case loading
-}
-
 struct ButtonInfo: Hashable, Identifiable {
     var id: UUID {
         return UUID()
@@ -22,7 +15,7 @@ struct ButtonInfo: Hashable, Identifiable {
     var buttonState = ButtonState.inactive
     var buttonImage: String?
     var buttonText: String?
-    var buttonItem: ButtonItem
+    var buttonItem: CarActionButton
     
     var buttonColorHexString: String {
         switch buttonState {
