@@ -34,25 +34,25 @@ class VrrrroomTests: XCTestCase {
     
     func test_carLockActionViewModel_locked_state() {
         let model = CarActionItemModel(titleString: "", state: .active, buttonItems: [])
-        let viewModel = CarActionViewModel(model: model)
+        let viewModel = CarLockActionViewModel(model: model)
         XCTAssertEqual(viewModel.stateString, "Locked")
     }
     
     func test_carLockActionViewModel_unlocked_state() {
         let model = CarActionItemModel(titleString: "", state: .inactive, buttonItems: [])
-        let viewModel = CarActionViewModel(model: model)
+        let viewModel = CarLockActionViewModel(model: model)
         XCTAssertEqual(viewModel.stateString, "Unlocked")
     }
     
     func test_carLockActionViewModel_busy_state() {
         let model = CarActionItemModel(titleString: "", state: .busy, buttonItems: [])
-        let viewModel = CarActionViewModel(model: model)
+        let viewModel = CarLockActionViewModel(model: model)
         XCTAssertEqual(viewModel.stateString, "...")
     }
     
     func test_carLockActionViewModel_unknown_state() {
         let model = CarActionItemModel(titleString: "", state: .unknown, buttonItems: [])
-        let viewModel = CarActionViewModel(model: model)
+        let viewModel = CarLockActionViewModel(model: model)
         XCTAssertEqual(viewModel.stateString, "")
     }
     
@@ -85,7 +85,7 @@ class VrrrroomTests: XCTestCase {
     func test_ButtonItemModel_state_should_change_to_inactive() {
         var item = ButtonItem(imageName: "", labelString: "", type: .stop, state: .active, isSelected: false)
         item.becomeInactive()
-        XCTAssertEqual(item.state, ButtonItemState.active)
+        XCTAssertEqual(item.state, ButtonItemState.inactive)
     }
     
     func test_ButtonItemModel_state_should_change_to_disabled() {
