@@ -9,22 +9,6 @@ import XCTest
 @testable import Vrrrroom
 
 class VrrrroomTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
     
     func test_carLockActionViewModel_title() {
         let model = CarActionItemModel(titleString: "infinityu", state: .active, buttonItems: [])
@@ -71,39 +55,26 @@ class VrrrroomTests: XCTestCase {
     
     // ButtonItemModel should go from inactive to loading on tap
     func test_ButtonItemModel_state_should_change_to_loading() {
-        var item = ButtonItem(imageName: "", labelString: "", type: .stop, state: .inactive, isSelected: false)
+        var item = CarActionButton(imageName: "", labelString: "", type: .stop, state: .inactive, isSelected: false)
         item.startLoading()
-        XCTAssertEqual(item.state, ButtonItemState.loading)
+        XCTAssertEqual(item.state, ButtonState.loading)
     }
     
     func test_ButtonItemModel_state_should_change_to_active() {
-        var item = ButtonItem(imageName: "", labelString: "", type: .stop, state: .loading, isSelected: false)
+        var item = CarActionButton(imageName: "", labelString: "", type: .stop, state: .loading, isSelected: false)
         item.becomeActive()
-        XCTAssertEqual(item.state, ButtonItemState.active)
+        XCTAssertEqual(item.state, ButtonState.active)
     }
     
     func test_ButtonItemModel_state_should_change_to_inactive() {
-        var item = ButtonItem(imageName: "", labelString: "", type: .stop, state: .active, isSelected: false)
+        var item = CarActionButton(imageName: "", labelString: "", type: .stop, state: .active, isSelected: false)
         item.becomeInactive()
-        XCTAssertEqual(item.state, ButtonItemState.inactive)
+        XCTAssertEqual(item.state, ButtonState.inactive)
     }
     
     func test_ButtonItemModel_state_should_change_to_disabled() {
-        var item = ButtonItem(imageName: "", labelString: "", type: .stop, state: .inactive, isSelected: false)
+        var item = CarActionButton(imageName: "", labelString: "", type: .stop, state: .inactive, isSelected: false)
         item.becomeDisabled()
-        XCTAssertEqual(item.state, ButtonItemState.disabled)
+        XCTAssertEqual(item.state, ButtonState.disabled)
     }
-    // ButtonItemModel should go from loading to active if something succeded
-    // ButtonItemModel should go from loading to inactive if something failed
-    // ButtonItemModel should stay in loading for 5 seconds
-    // ButtonItemModel should go to disabled from disabled if other button is loading
-    // ButtonItemModel should become inactive if the other button is active/inactive
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }
