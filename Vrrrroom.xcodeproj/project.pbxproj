@@ -23,6 +23,8 @@
 		F9A0097E27B9915100CC7276 /* CarCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A0097D27B9915100CC7276 /* CarCollectionViewModel.swift */; };
 		F9A0098027B991D700CC7276 /* CarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A0097F27B991D700CC7276 /* CarModel.swift */; };
 		F9A0098227BA728B00CC7276 /* ButtonInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A0098127BA728B00CC7276 /* ButtonInfo.swift */; };
+		F9A0098427BA7F2000CC7276 /* readme_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F9A0098327BA7F2000CC7276 /* readme_icon.png */; };
+		F9A0098627BA7F7800CC7276 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = F9A0098527BA7F7800CC7276 /* Readme.md */; };
 		F9B52D6327B7BEF90057E12A /* CarStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B52D6227B7BEF90057E12A /* CarStackView.swift */; };
 		F9B52D6727B7C2C20057E12A /* CarStackViewTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B52D6627B7C2C20057E12A /* CarStackViewTitleView.swift */; };
 		F9B52D6927B7C52B0057E12A /* ColorHexExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B52D6827B7C52B0057E12A /* ColorHexExtention.swift */; };
@@ -72,6 +74,8 @@
 		F9A0097D27B9915100CC7276 /* CarCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCollectionViewModel.swift; sourceTree = "<group>"; };
 		F9A0097F27B991D700CC7276 /* CarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModel.swift; sourceTree = "<group>"; };
 		F9A0098127BA728B00CC7276 /* ButtonInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonInfo.swift; sourceTree = "<group>"; };
+		F9A0098327BA7F2000CC7276 /* readme_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = readme_icon.png; sourceTree = "<group>"; };
+		F9A0098527BA7F7800CC7276 /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = SOURCE_ROOT; };
 		F9B52D6227B7BEF90057E12A /* CarStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarStackView.swift; sourceTree = "<group>"; };
 		F9B52D6627B7C2C20057E12A /* CarStackViewTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarStackViewTitleView.swift; sourceTree = "<group>"; };
 		F9B52D6827B7C52B0057E12A /* ColorHexExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHexExtention.swift; sourceTree = "<group>"; };
@@ -138,6 +142,8 @@
 				F9A0097927B9503800CC7276 /* Car Action */,
 				F928676E27B6A420001DCFD1 /* VrrrroomApp.swift */,
 				F928677227B6A421001DCFD1 /* Assets.xcassets */,
+				F9A0098327BA7F2000CC7276 /* readme_icon.png */,
+				F9A0098527BA7F7800CC7276 /* Readme.md */,
 				F928677427B6A421001DCFD1 /* Preview Content */,
 			);
 			path = Vrrrroom;
@@ -320,7 +326,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9A0098427BA7F2000CC7276 /* readme_icon.png in Resources */,
 				F928677627B6A421001DCFD1 /* Preview Assets.xcassets in Resources */,
+				F9A0098627BA7F7800CC7276 /* Readme.md in Resources */,
 				F928677327B6A421001DCFD1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
