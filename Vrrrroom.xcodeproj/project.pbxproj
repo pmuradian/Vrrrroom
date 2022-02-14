@@ -22,6 +22,7 @@
 		F9A0097827B94D3200CC7276 /* ItemState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A0097727B94D3200CC7276 /* ItemState.swift */; };
 		F9A0097E27B9915100CC7276 /* CarCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A0097D27B9915100CC7276 /* CarCollectionViewModel.swift */; };
 		F9A0098027B991D700CC7276 /* CarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A0097F27B991D700CC7276 /* CarModel.swift */; };
+		F9A0098227BA728B00CC7276 /* ButtonInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A0098127BA728B00CC7276 /* ButtonInfo.swift */; };
 		F9B52D6327B7BEF90057E12A /* CarStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B52D6227B7BEF90057E12A /* CarStackView.swift */; };
 		F9B52D6727B7C2C20057E12A /* CarStackViewTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B52D6627B7C2C20057E12A /* CarStackViewTitleView.swift */; };
 		F9B52D6927B7C52B0057E12A /* ColorHexExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B52D6827B7C52B0057E12A /* ColorHexExtention.swift */; };
@@ -70,6 +71,7 @@
 		F9A0097727B94D3200CC7276 /* ItemState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemState.swift; sourceTree = "<group>"; };
 		F9A0097D27B9915100CC7276 /* CarCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCollectionViewModel.swift; sourceTree = "<group>"; };
 		F9A0097F27B991D700CC7276 /* CarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModel.swift; sourceTree = "<group>"; };
+		F9A0098127BA728B00CC7276 /* ButtonInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonInfo.swift; sourceTree = "<group>"; };
 		F9B52D6227B7BEF90057E12A /* CarStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarStackView.swift; sourceTree = "<group>"; };
 		F9B52D6627B7C2C20057E12A /* CarStackViewTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarStackViewTitleView.swift; sourceTree = "<group>"; };
 		F9B52D6827B7C52B0057E12A /* ColorHexExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHexExtention.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				F9B52D7027B804320057E12A /* CarActionView.swift */,
 				F9B52D7227B804640057E12A /* CarActionItemView.swift */,
 				F9A0097327B94CFB00CC7276 /* CarActionViewModel.swift */,
+				F9A0098127BA728B00CC7276 /* ButtonInfo.swift */,
 				F9A0097527B94D1C00CC7276 /* CarActionItemModel.swift */,
 				F9A0097127B94CCE00CC7276 /* CarEngineActionViewModel.swift */,
 				F9A0096F27B94CAA00CC7276 /* CarLockActionViewModel.swift */,
@@ -353,6 +356,7 @@
 				F9B52D6327B7BEF90057E12A /* CarStackView.swift in Sources */,
 				F9B52D7327B804640057E12A /* CarActionItemView.swift in Sources */,
 				F9A0097427B94CFB00CC7276 /* CarActionViewModel.swift in Sources */,
+				F9A0098227BA728B00CC7276 /* ButtonInfo.swift in Sources */,
 				F9A0096E27B94C8500CC7276 /* ButtonItem.swift in Sources */,
 				F9B52D7927B853D30057E12A /* BottomMenuItem.swift in Sources */,
 				F9B52D6727B7C2C20057E12A /* CarStackViewTitleView.swift in Sources */,

@@ -12,7 +12,7 @@ struct CarActionView: View {
         VStack {
             HStack {
                 let doorActionModel = CarActionItemModel(titleString: "Doors",
-                                                     state: .active,
+                                                     state: .unknown,
                                                      buttonItems: [ButtonItem(imageName: "act_unlock",
                                                                         labelString: nil,
                                                                         type: .unlock,
@@ -25,7 +25,7 @@ struct CarActionView: View {
                 CarActionItemView(viewModel: doorsViewModel)
                 Spacer()
                 let engineActionModel = CarActionItemModel(titleString: "Engine",
-                                                           state: .inactive,
+                                                           state: .unknown,
                                                            buttonItems: [ButtonItem(imageName: nil,
                                                                               labelString: "START",
                                                                               type: .start,

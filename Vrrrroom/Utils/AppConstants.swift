@@ -10,6 +10,7 @@ import SwiftUI
 
 struct AppConstants {
     static let appMainBrown = Color(hex: "A66A53")
+    static let appMainBrownColor = "A66A53"
     static let boldSystemFont = Font.system(size: 18,
                                        weight: .bold,
                                        design: .default)
@@ -19,4 +20,10 @@ struct AppConstants {
     static let smallSystemFont = Font.system(size: 10,
                                              weight: .bold,
                                              design: .default)
+}
+
+extension Color {
+    static func appMainBrown() -> Color {
+        return Color(hex: AppConstants.appMainBrownColor)
+    }
 }

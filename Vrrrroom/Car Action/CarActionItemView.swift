@@ -9,41 +9,41 @@ import SwiftUI
 
 struct CarActionItemView: View {
     @ObservedObject var viewModel: CarActionViewModel
-    @State var selectedItem: ButtonItem?
-    
+    @State var selectedButtonInfo: ButtonInfo?
+    @State private var isLoading = false
+    @State private var animationAmount = 1.0
+
     init(viewModel: CarActionViewModel) {
         self.viewModel = viewModel
     }
     
-    private func createButtonFrom(buttonItem: ButtonItem) -> some View {
+    private func createButtonFrom(info: ButtonInfo) -> some View {
         return Button {
-            if buttonItem.state == .inactive {
-                selectedItem = buttonItem
+            // allow only inactive buttons to be touched
+            if info.buttonState == .inactive {
+                selectedButtonInfo = info
             }
         } label: {
-            if let name = buttonItem.imageName {
+        if let name = info.buttonImage {
                 Image(name)
                     .resizable()
                     .scaledToFit()
             }
-            if let text = buttonItem.labelString {
+        if let text = info.buttonText {
                 Text(text)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .foregroundColor(Color.white)
             }
         }
-        .alert(item: $selectedItem) { item in
+        .alert(item: $selectedButtonInfo) { item in
             Alert(title: Text("Are you sure"),
                   message: Text("Please confirm that you want to unlock Avto"),
                   primaryButton: .cancel(),
                   secondaryButton: .default(Text("Yes Unlock")) {
-                    viewModel.actionFor(buttonItem: item)
+                    viewModel.actionFor(buttonInfo: item)
             })
         }
     }
-    
-    @State private var isLoading = false
-    @State private var animationAmount = 1.0
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -58,8 +58,8 @@ struct CarActionItemView: View {
                     .foregroundColor(.gray)
             }.padding(.bottom, -5)
             HStack {
-                ForEach(viewModel.buttonItems, id: \.self) { item in
-                    if item.state == .loading {
+                ForEach(viewModel.buttonInfos, id: \.self) { item in
+                    if item.buttonState == .loading {
                         Circle()
                             .trim(from: 0, to: 0.7)
                             .stroke(AppConstants.appMainBrown, lineWidth: 5)
@@ -74,16 +74,9 @@ struct CarActionItemView: View {
                                             animationAmount -= 1
                                         })
                     } else {
-                    createButtonFrom(buttonItem: item)
+                    createButtonFrom(info: item)
                         .padding(5)
-                        .background {
-                                switch item.state {
-                                case .active: AppConstants.appMainBrown
-                                case .disabled: Color.gray
-                                case .inactive: Color.black
-                                default: Color.white
-                            }
-                        }
+                        .background(Color(hex: item.buttonColorHexString))
                         .clipShape(Circle())
                     }
                 }.padding(10)
@@ -95,6 +88,8 @@ struct CarActionItemView: View {
         .frame(maxWidth: .infinity)
         .cornerRadius(5)
     }
+    
+    
 }
 
 //struct CarActionItemView_Previews: PreviewProvider {
